@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  gif-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - APIFY_API_TOKEN=${APIFY_API_TOKEN}
+      - GCP_BUCKET_NAME=${GCP_BUCKET_NAME}
+      - GCP_GIF_FOLDER=${GCP_GIF_FOLDER}
+    volumes:
+      - .:/app
+    restart: unless-stopped 
