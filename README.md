@@ -74,7 +74,7 @@ Request body:
       "platform": "tiktok"
     }
   ],
-  "country_name": "US"
+  "sheet_name": "US"
 }
 
 #youtube
@@ -85,7 +85,7 @@ Request body:
       "platform": "youtube"
     }
   ],
-  "country_name": "US"
+  "sheet_name": "US"
 }
 ```
 

@@ -27,7 +27,7 @@ class VideoProcessor:
             print(f"Error installing Playwright browsers: {e.stderr.decode()}")
             raise Exception("Failed to install Playwright browsers. Please run 'playwright install chromium' manually.")
 
-    async def process_batch(self, urls: List[VideoURL], country_name: str) -> List[GIFResponse]:
+    async def process_batch(self, urls: List[VideoURL], sheet_name: str) -> List[GIFResponse]:
         results = []
         
         for video_url in urls:
@@ -212,5 +212,3 @@ class VideoProcessor:
             if os.path.exists(gif_path):
                 os.unlink(gif_path)
 
-    async def get_task_status(self, task_id: str) -> str:
-        return self._tasks.get(task_id, "unknown") 

@@ -7,7 +7,7 @@ class VideoURL(BaseModel):
 
 class BatchProcessRequest(BaseModel):
     urls: List[VideoURL]
-    country_name: str
+    sheet_name: str
 
 class GIFResponse(BaseModel):
     original_url: str

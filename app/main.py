@@ -21,6 +21,7 @@ app.add_middleware(
 # Include API routes
 app.include_router(api_router, prefix="/api/v1")
 
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy"} 
+@app.get("/", tags=["Root"])
+async def read_root():
+    """Root endpoint."""
+    return {"message": "GIF Conversion Microservice works!"}

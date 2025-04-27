@@ -9,7 +9,7 @@ video_processor = VideoProcessor()
 @router.post("/process-batch", response_model=BatchProcessResponse)
 async def process_batch(request: BatchProcessRequest, background_tasks: BackgroundTasks):
     try:
-        results = await video_processor.process_batch(request.urls, request.country_name)
+        results = await video_processor.process_batch(request.urls, request.sheet_name)
         return BatchProcessResponse(
             results=results,
             total_processed=len(results),
@@ -18,11 +18,3 @@ async def process_batch(request: BatchProcessRequest, background_tasks: Backgrou
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-@router.get("/status/{task_id}")
-async def get_status(task_id: str):
-    try:
-        status = await video_processor.get_task_status(task_id)
-        return {"status": status}
-    except Exception as e:
-        raise HTTPException(status_code=404, detail=str(e)) 

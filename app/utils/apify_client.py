@@ -5,7 +5,7 @@ from app.core.config import settings
 class ApifyClient:
     def __init__(self):
         self.api_token = settings.APIFY_API_TOKEN
-        self.base_url = settings.APIFY_ACTOR_TASK_URL
+        self.base_url = f"https://api.apify.com/v2/actor-tasks/{settings.TIKTOK_SCRAPER_TASK_ID}/runs"
 
     async def run_actor_task(self, video_url: str) -> str:
         """Run the Apify actor task and return the run ID."""
