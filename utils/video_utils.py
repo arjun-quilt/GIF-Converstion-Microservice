@@ -6,7 +6,6 @@ import nest_asyncio
 import asyncio
 import httpx
 
-# Apply nested event loop fix
 nest_asyncio.apply()
 
 def convert_to_gif(video_path: str, output_path: str, max_duration: int = 2, fps: int = 3):

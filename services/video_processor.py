@@ -4,12 +4,12 @@ import os
 import tempfile
 import subprocess
 from typing import List
-from app.models.schemas import VideoURL, GIFResponse
-from app.core.config import settings
-from app.utils.gcs_client import GCSClient
-from app.utils.video_utils import convert_to_gif, download_douyin_video
-from app.utils.apify_client import ApifyClient
-from app.utils.youtube_client import YouTubeClient
+from model.schemas import VideoURL, GIFResponse
+from core.config import settings
+from utils.gcs_client import GCSClient
+from utils.video_utils import convert_to_gif, download_douyin_video
+from utils.apify_client import ApifyClient
+from utils.youtube_client import YouTubeClient
 
 class VideoProcessor:
     def __init__(self):

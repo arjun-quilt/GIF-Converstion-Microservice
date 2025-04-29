@@ -8,7 +8,7 @@ A microservice for converting videos from various platforms (TikTok, YouTube, Do
 - Support for TikTok, YouTube, Douyin, and GCS videos
 - Asynchronous processing
 - Google Cloud Storage integration
-- Apify integration for TikTok and youtube video processing
+- Apify integration for TikTok video processing
 
 ## Prerequisites
 
@@ -74,10 +74,10 @@ Request body:
       "platform": "tiktok"
     }
   ],
-  "sheet_name": "US"
+  "sheet_name": ""
 }
 
-#youtube
+
 {
   "urls": [
     {
@@ -85,7 +85,7 @@ Request body:
       "platform": "youtube"
     }
   ],
-  "sheet_name": "US"
+  "sheet_name": ""
 }
 ```
 
@@ -105,18 +105,10 @@ app/
 │   └── schemas.py
 ├── services/
 │   └── video_processor.py
-├── utils/
+├── utils/ 
 │   ├── gcs_client.py
 │   ├── apify_client.py
 │   └── video_utils.py
 └── main.py
 ```
 
-### Testing
-```bash
-pytest
-```
-
-## License
-
-MIT 

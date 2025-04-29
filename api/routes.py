@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, BackgroundTasks
-from app.models.schemas import BatchProcessRequest, BatchProcessResponse
-from app.services.video_processor import VideoProcessor
-from app.core.config import settings
+from model.schemas import BatchProcessRequest, BatchProcessResponse
+from services.video_processor import VideoProcessor
+from core.config import settings
 
 router = APIRouter()
 video_processor = VideoProcessor()

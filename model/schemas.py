@@ -3,7 +3,7 @@ from typing import List, Optional
 
 class VideoURL(BaseModel):
     url: str
-    platform: str  # "tiktok", "youtube", "douyin", "gcs"
+    platform: str  # "tiktok", "youtube", "douyin", "gcs" 
 
 class BatchProcessRequest(BaseModel):
     urls: List[VideoURL]

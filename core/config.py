@@ -2,7 +2,7 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 
-class Settings(BaseSettings):
+class Settings(BaseSettings): 
     # Logging Settings
     logger: str = "logging"
     log_level: str = "DEBUG"
